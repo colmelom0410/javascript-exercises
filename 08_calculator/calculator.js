@@ -20,13 +20,18 @@ const power = function(num, exponent) {
 };
 
 const factorial = function(num) {
-  if (num === 0 || num === 1){
-    return 1;
+  // if (num === 0 || num === 1){
+  //   return 1;
+  // }
+  // for(let i = num-1; i>=1; i--){
+  //   num*=i;
+  // }
+  // return num;
+  let numArray = [];
+  for (let i = num; i >= 1; i--){
+    numArray.push(i);
   }
-  for(let i = num-1; i>=1; i--){
-    num*=i;
-  }
-  return num;
+  numArray.reduce((product, number) => {return product*number},1)
 };
 
 // Do not edit below this line
